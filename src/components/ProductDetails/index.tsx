@@ -11,7 +11,7 @@ const ProductDetails: React.FC = () => {
 
   useEffect(() => {
     (async () => {
-      const product = await getProduct(id);
+      const product = await getProduct(Number(id));
       setProduct(product);
     })();
   }, [id]);
