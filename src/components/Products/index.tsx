@@ -9,19 +9,18 @@ const Products: React.FC = () => {
 
   useEffect(() => {
     (async () => {
-      const products = await getProducts();
-      setProducts(products);
+      const productsData = await getProducts();
+      setProducts(productsData);
     })();
   }, [products]);
 
   return (
     <Row xs={1} md={2} className="g-2">
-      {products &&
-        products.map((product:Product) => (
-          <Col key={`Product[${product.id}]`}>
-            <ProductItem {...product} />
-          </Col>
-        ))}
+      {products.map((product: Product) => (
+        <Col key={`Product[${product.id}]`}>
+          <ProductItem {...product} />
+        </Col>
+      ))}
     </Row>
   );
 };

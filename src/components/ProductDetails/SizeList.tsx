@@ -12,10 +12,10 @@ const SizesList: React.FC<PropsSizesList> = ({ actualSizes }) => {
 
   useEffect(() => {
     (async () => {
-      const product = await getSizes();
-      setSizes(product);
+      const sizesData = await getSizes();
+      setSizes(sizesData);
     })();
-  }, []);
+  }, [sizes]);
   return (
     <InputGroup className="mb-5">
       {sizes.map(({ id, label, number }) => {

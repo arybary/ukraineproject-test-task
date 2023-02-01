@@ -18,7 +18,7 @@ const ProductProperty: React.FC<ProductProps> = ({ nameProduct, colors }) => {
 
   const { images, description, price, sizes } = selectedColor;
 
-  const changeColor = (name: string) => {
+  const changeColor = (name: string): void => {
     const selectColor: Color = colors.filter(
       (color: Color) => color.name === name
     )[0];

@@ -4,13 +4,13 @@ import { Color } from "../../model/Product";
 
 interface PropsSelectColor {
   colors: Color[];
-  onChange: any;
+  onChange: (name: string) => void;
 }
 
 const SelectColor: React.FC<PropsSelectColor> = ({ colors, onChange }) => {
-  const [selected, setSelected] = useState(colors[0].name);
+  const [selected, setSelected] = useState<string>(colors[0].name);
 
-  const onSelect = (e: { target: { value: string } }) => {
+  const onSelect = (e: { target: { value: string } }): void => {
     const newSelected = e.target.value;
     setSelected(newSelected);
     onChange(newSelected);
