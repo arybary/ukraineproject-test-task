@@ -3,11 +3,11 @@ import { Button, InputGroup } from "react-bootstrap";
 import { Sizes } from "../../model/Product";
 import { getSizes } from "../../services/api";
 
-interface PropsSizesList {
+interface PropsSizesListBtn {
   actualSizes: number[];
 }
 
-const SizesList: React.FC<PropsSizesList> = ({ actualSizes }) => {
+const SizesListBtn: React.FC<PropsSizesListBtn> = ({ actualSizes }) => {
   const [sizes, setSizes] = useState<Sizes[]>([]);
 
   useEffect(() => {
@@ -29,4 +29,4 @@ const SizesList: React.FC<PropsSizesList> = ({ actualSizes }) => {
     </InputGroup>
   );
 };
-export default SizesList;
+export default SizesListBtn;

@@ -4,9 +4,9 @@ import ProductImagesCarusel from "./ProductImagesCarusel";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/esm/Col";
 import Row from "react-bootstrap/esm/Row";
-import SizesList from "./SizeList";
-import SelectColor from "./SelectColor";
+import SizesList from "./SizeListBtn";
 import { Card } from "react-bootstrap";
+import ColorListBtn from "./ColorListBtn";
 
 interface ProductProps {
   colors: Color[];
@@ -18,7 +18,7 @@ const ProductProperty: React.FC<ProductProps> = ({ nameProduct, colors }) => {
 
   const { images, description, price, sizes } = selectedColor;
 
-  const changeColor = (name: string): void => {
+  const changeColor = (name: Color["name"]): void => {
     const selectColor: Color | undefined = colors.find(
       (color: Color) => color.name === name
     );
@@ -40,7 +40,11 @@ const ProductProperty: React.FC<ProductProps> = ({ nameProduct, colors }) => {
             </Col>
             <Col xs={10} md={6}>
               <Card.Title>цвет:</Card.Title>
-              <SelectColor onChange={changeColor} colors={colors} />
+              <ColorListBtn
+                onChange={changeColor}
+                colors={colors}
+                selectedColor={selectedColor.name}
+              />
               <Card.Text>{description}</Card.Text>
               <Card.Title>размер:</Card.Title>
               <SizesList actualSizes={sizes} />

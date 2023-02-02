@@ -6,7 +6,7 @@ export interface Product {
 
 export interface Color {
   id: number;
-  name: string;
+  name: "желтый" | "синий" | "черный" | "белый" | "серый";
   images: string[];
   price: string;
   description: string;
