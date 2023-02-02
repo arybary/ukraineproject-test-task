@@ -19,10 +19,12 @@ const ProductProperty: React.FC<ProductProps> = ({ nameProduct, colors }) => {
   const { images, description, price, sizes } = selectedColor;
 
   const changeColor = (name: string): void => {
-    const selectColor: Color = colors.filter(
+    const selectColor: Color | undefined = colors.find(
       (color: Color) => color.name === name
-    )[0];
-    setSelectedColor(selectColor);
+    );
+    if (selectColor) {
+      setSelectedColor(selectColor);
+    }
   };
 
   return (
