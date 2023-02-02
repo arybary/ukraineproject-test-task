@@ -3,11 +3,11 @@ import { Button, InputGroup } from "react-bootstrap";
 import { Color } from "../../model/Product";
 
 const colorButtons = {
-  желтый: "warning",
-  синий: "primary",
-  черный: "dark",
+  желтый: "outline-warning",
+  синий: "outline-primary",
+  черный: "outline-dark",
   белый: "light",
-  серый: "secondary",
+  серый: "outline-secondary",
 };
 
 interface PropsColorListBtn {
