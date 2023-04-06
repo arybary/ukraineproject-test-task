@@ -2,14 +2,14 @@
 
 ### [Site link]
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/14e7ef42-5c90-44c8-a7ec-0b6e20c59735/deploy-status)](https://incandescent-malasada-a49651.netlify.app/)
-<a href="https://incandescent-malasada-a49651.netlify.app/"># LINK</a>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/14e7ef42-5c90-44c8-a7ec-0b6e20c59735/deploy-status)](https://main--glistening-parfait-e4402f.netlify.app/)
+<https://main--glistening-parfait-e4402f.netlify.app/># LINK</a>
 
 ### The tech stack is:
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
-- [boostrap](https://react-bootstrap.netlify.app)
+- mui
 - [TypeScript](https://ru.wikipedia.org/wiki/TypeScript)
 - [REACT](https://ru.wikipedia.org/wiki/React)
 
